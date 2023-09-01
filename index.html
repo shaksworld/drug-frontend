@@ -3,22 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Drug List Application</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <form id="drug-form">
-        <div >
-            <label for="drug-name">Drug Name</label>
-            <input type="text" id="drug-name" name="drug-name">
-        </div>
-        <div>
-            <label>Brand Name</label>
-            <input type="text" id="brand-name" name="brand-name">
-        </div>
-        <div>
-            <label>Status</label>
-            <select></select>
-        </div>
-    </form>
+<header>
+    <h1>Drug List Application</h1>
+</header>
+
+<main>
+    <section id="drug-form">
+        <h2>Add a New Drug</h2>
+        <form id="add-drug-form">
+            <div class="form-group">
+                <label for="drug-name">Drug Name:</label>
+                <input type="text" id="drug-name" name="drugName" required>
+            </div>
+            <div class="form-group">
+                <label for="brand-name">Brand Name:</label>
+                <input type="text" id="brand-name" name="brandName" required>
+            </div>
+            <div class="form-group">
+                <label for="date-created">Date Created:</label>
+                <input type="date" id="date-created" name="dateCreated" required>
+            </div>
+            <div class="form-group">
+                <label for="status">Status:</label>
+                <select id="status" name="status" required>
+                    <option value="Active">Active</option>
+                    <option value="Inactive">Inactive</option>
+                </select>
+            </div>
+            <button type="submit">Add Drug</button>
+        </form>
+    </section>
+
+    <section id="drug-list">
+        <h2>Drug List</h2>
+        <ul id="drug-list-ul">
+            <!-- Drug list items will be dynamically added here -->
+        </ul>
+    </section>
+</main>
+
+<script src="app.js"></script>
 </body>
 </html>
